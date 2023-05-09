@@ -1,27 +1,30 @@
-#include<iostream>
-#include<cstring>
-#include<cctype>
+#include<bits/stdc++.h>
+#define ll              long long
+#define ull             unsigned long long
+#define pb              push_back
+#define fastread()      (ios_base:: sync_with_stdio(false),cin.tie(NULL));
 using namespace std;
-int main(){
-    char s[100];
-    cin >> s;
-    int l=strlen(s);
-    
-int i=0;
-char c;
-     while (s[i])
-  {
-    c=s[i];
-    putchar (tolower(c));
-    i++;
-  }
-    for(i=0;i<l;i++){
-        if(s[i]== 'a'|| 'b' || 'c'|| 'd' || 'e'){
+int main()
+{
+    fastread();
+
+    //freopen("input.txt","r", stdin);
+
+    ll n;
+    string s,t;
+    cin>>s;
+    n = s.length();
+    transform(s.begin(),s.end(),s.begin(), ::tolower);
+
+    for(ll i=0; i<n; i++){
+        if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u' || s[i] == 'y')
             continue;
-        }
         else{
-            cout << "." << i;
+            t += '.';
+            t += s[i];
         }
     }
-    
+    cout<<t<<endl;
+
+    return 0;
 }
