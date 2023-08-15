@@ -12,7 +12,7 @@ int main() {
 
         for (int i = 1; i < 50; i++) {
             m = 2 * m + 1;
-            if (n % m==1) {
+            if (n % m) {
                 continue;
             }
             cout << n / m << endl;
